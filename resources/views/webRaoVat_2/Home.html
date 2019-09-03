@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      .anh1 {
+        border: 1px dashed white;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <header>
+      <div class="container-fluid bg-success">
+        <div class="row">
+          <div class="col-2 mb-2 mt-0 text-center">
+            <a href="./Home.html" class="h1 text-warning">Logo</a
+            ><span class="text-small text-light">Web rao vặt</span>
+          </div>
+          <div class="col-8">
+            <div class="row" style="margin-top: 9px">
+              <div class="col-8 px-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Tìm kiếm .."
+                />
+              </div>
+              <div class="col-2 px-0">
+                <!-- <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Danh mục.."
+                /> -->
+                <div class="dropdown">
+                  <button
+                    class="form-control dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Danh mục &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </button>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Nhà cửa - đất đai</a>
+                    <a class="dropdown-item" href="#">Việc làm</a>
+                    <a class="dropdown-item" href="#">Ô tô - xe máy</a>
+                    <a class="dropdown-item" href="#">Điện thoại - phụ kiện</a>
+                    <a class="dropdown-item" href="#">Máy tính - linh kiện</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 px-0">
+                <!-- <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Toàn quốc.."
+                /> -->
+                <div class="dropdown">
+                  <button
+                    class="form-control dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Toàn quốc &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </button>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Bình Dương</a>
+                    <a class="dropdown-item" href="#">Cần Thơ</a>
+                    <a class="dropdown-item" href="#">Đồng Nai</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 text-center m-auto pl-0">
+            <a href="#" class="text-white px-2">Đăng nhập</a>
+            <a
+              href="#"
+              class="text-warning px-2"
+              style="border:1px dashed white "
+              >Đăng tin</a
+            >
+          </div>
+        </div>
+      </div>
+      <hr class="mt-0" />
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <ul class="list-group">
+              <li
+                class="list-group-item active text-dark font-weight-bold"
+                style="background: #eeeeee;border: #dfdfdf "
+              >
+                <img
+                  class="rounded mr-2"
+                  src="./img/vitri.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+                Vị trí
+              </li>
+              <li class="list-group-item">
+                <div class="dropdown">
+                  <a
+                    class="form-control dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Toàn quốc &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                      <a class="dropdown-item" href="#">Đà Nẵng</a>
+                      <a class="dropdown-item" href="#">Hải Phòng</a>
+                      <a class="dropdown-item" href="#">Bình Dương</a>
+                      <a class="dropdown-item" href="#">Cần Thơ</a>
+                      <a class="dropdown-item" href="#">Đồng Nai</a>
+                  </div>
+              </li>
+            </ul>
+            <hr />
+            <ul class="list-group">
+              <li
+                class="list-group-item active text-dark font-weight-bold"
+                style="background: #eeeeee;border: #dfdfdf"
+              >
+                <img
+                  class="rounded mr-2"
+                  src="./img/danhMuc.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+                Danh mục
+              </li>
+              <li class="list-group-item">
+                <img
+                  class="rounded mr-2"
+                  src="./img/nhaDat.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />Nhà cửa - đất đai
+              </li>
+              <li class="list-group-item">
+                <img
+                  class="rounded mr-2"
+                  src="./img/viecLam.jpg"
+                  alt=""
+                  width="30"
+                  height="30"
+                />Việc làm
+              </li>
+              <li class="list-group-item">
+                <img
+                  class="rounded mr-2"
+                  src="./img/oTo.jpg"
+                  alt=""
+                  width="30"
+                  height="30"
+                />Ô tô - xe máy
+              </li>
+              <li class="list-group-item">
+                <img
+                  class="rounded mr-2"
+                  src="./img/dienThoai.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />Điện thoại - phụ kiện
+              </li>
+              <li class="list-group-item">
+                <img
+                  class="rounded mr-2"
+                  src="./img/laptop.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />Máy tính - Linh kiện
+              </li>
+            </ul>
+          </div>
+          <div class="col-9">
+            <div class="row bg-white rounded border mb-2">
+              <div class="col">
+                <div class="h5 mb-0 mt-3 text-white badge badge-danger">
+                  Tin hot
+                </div>
+                <hr class="my-2" />
+                <div class="row">
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot1.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Cho thuê kho lạnh tiêu chuẩn GSP 35 Cự Lộc, Hà Nội Gần
+                      Royal City
+                    </div>
+                    <div class="h6 text-danger">350.000 đ</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot2.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Tìm 03 bạn sinh viên phụ bán hàng giúp chị không cần kinh
+                      nghiệm
+                    </div>
+                    <div class="h6 text-danger">6.000.000</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot3.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Lô Đất 2 Mặt Tiền Ngay Chợ Phú Phong Chỉ 1 tỷ 530 Triệu Sổ
+                      Hồng
+                    </div>
+                    <div class="h6 text-danger">1.530.000.000 đ</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot4.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Bán nhà trung tâm quận Ba Đình, ngõ 173 Hoàng Hoa Thám, Hà
+                      Nội
+                    </div>
+                    <div class="h6 text-danger">6.500.000.000 đ</div>
+                  </div>
+                  <div class="col text-center mb-2" style="border-right:black">
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot5.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Tìm 03 bạn sinh viên phụ bán hàng giúp chị không cần kinh
+                      nghiệm
+                    </div>
+                    <div class="h6 text-danger">6.000.000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row bg-white rounded border">
+              <div class="col">
+                <div class="h5 mb-0 mt-3 text-white badge badge-success">
+                  Tin mới
+                </div>
+                <hr class="my-2" />
+                <div class="row">
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot6.png"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Vinfast klara A2
+                    </div>
+                    <div class="h6 text-danger">30,000,000 đ</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot6.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Nhà cửa - Đất đai Thuê và cho thuê nhà Cho thuê nhà 1 trệt
+                      3 lầu Nguyễn Hữu Dật, Tân Phú, 18tr
+                    </div>
+                    <div class="h6 text-danger">6.000.000</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot7.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Giới thiệu Biệt Thự Biển Ali
+                    </div>
+                    <div class="h6 text-danger">1.030.000.000 đ</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot8.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Laptop Dell Latitude E6420, i5 2520M 4G 320G Đẹp zinl
+                    </div>
+                    <div class="h6 text-danger">4,500,000 đ</div>
+                  </div>
+                  <div class="col text-center mb-2" style="border-right:black">
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot9.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Oppo F1w Ram 3GB 2 sim chính hãng đẹp likenew
+                    </div>
+                    <div class="h6 text-danger">1,799,000 đ</div>
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot6.png"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Vinfast klara A2
+                    </div>
+                    <div class="h6 text-danger">30,000,000 đ</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot6.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Nhà cửa - Đất đai Thuê và cho thuê nhà Cho thuê nhà 1 trệt
+                      3 lầu Nguyễn Hữu Dật, Tân Phú, 18tr
+                    </div>
+                    <div class="h6 text-danger">6.000.000</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot7.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Giới thiệu Biệt Thự Biển Ali
+                    </div>
+                    <div class="h6 text-danger">1.030.000.000 đ</div>
+                  </div>
+                  <div
+                    class="col text-center border-right mb-2"
+                    style="border-right:black"
+                  >
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot8.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Laptop Dell Latitude E6420, i5 2520M 4G 320G Đẹp zinl
+                    </div>
+                    <div class="h6 text-danger">4,500,000 đ</div>
+                  </div>
+                  <div class="col text-center mb-2" style="border-right:black">
+                    <img
+                      class="rounded mr-2"
+                      src="./img/hot9.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                    <br />
+                    <div class="small text-secondary">
+                      Oppo F1w Ram 3GB 2 sim chính hãng đẹp likenew
+                    </div>
+                    <div class="h6 text-danger">1,799,000 đ</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
