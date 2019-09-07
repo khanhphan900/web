@@ -30,8 +30,13 @@ class UserController extends Controller
         // ghi nhớ tên đăng nhập
         $remember = $request->has('remember') ? true : false;
         if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password], $remember)){
-            // dd('thành công');
-            return redirect('home');
+            if (Auth::user()->role =='1') {
+                // dd('xin chào admin');
+                return redirect('admin');
+            } else {
+                // dd('thường dân');
+                return redirect('home');
+            }
         }else{
             return redirect('login')->with('thongbao', 'Đăng nhập thất bại') ;
         }

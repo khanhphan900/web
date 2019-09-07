@@ -27,6 +27,7 @@ class ArticlesTableSeeder extends Seeder
                 $variableNbWords = true),
                 'img' => $faker->image($dir = null, $width = 640, $height = 480, 'cats', false),
                 'content' => $faker->paragraph,
+                'phone' => $faker->tollFreePhoneNumber,
                 'price' => $faker->ean8,
                 'area_id'=> $AreaIdRand,
                 'category_id'=> $CategoryIdRand,

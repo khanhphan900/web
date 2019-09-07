@@ -7,11 +7,14 @@
       <div class="col-4"><img src="upload/{{$post->img}}" alt="" width="250" height="300"></div>
       <div class="col-8">
         {{$post->content}} <br><br>
-      <div class="text-right text-danger h4">{{number_format($post->price)}} VNĐ</div>
+        <div class="text-right h5">
+          <span class="text-secondary">SĐT liên lạc : </span>
+          {{$post->phone}}</div> <br>
+        <div class="text-right text-danger h4">{{number_format($post->price)}} VNĐ</div>
+      </div>
+  </div>
         <hr>
         Ngày đăng : {{$post->created_at}} <br>
         Chỉnh sửa : {{$post->updated_at}}
-      </div>
-  </div>
 </main>    
 @endsection

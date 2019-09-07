@@ -26,9 +26,18 @@
           <div class="row">
             <div class="col-3">
               @if(Auth::check())
-               <ul class="list-group">
-                 <a href="{{route('Article.index')}}" class="btn btn-primary mb-3">{{$User}}</a>
-               </ul>
+                @if (Auth::user()->role =='1')
+                  <ul class="list-group">
+                    <a href="{{route('Article.index')}}" class="btn btn-primary mb-3">Admin : {{$User}}</a>
+                  </ul> 
+                  <ul class="list-group">
+                    <a href="{{route('admin.index')}}" class="btn btn-info mb-3"> Quản lý </a>
+                  </ul>                   
+                @else
+                  <ul class="list-group">
+                    <a href="{{route('Article.index')}}" class="btn btn-primary mb-3">{{$User}}</a>
+                  </ul>
+                @endif
               @endif
               <ul class="list-group">
                 <li

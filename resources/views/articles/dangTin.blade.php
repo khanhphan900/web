@@ -61,16 +61,19 @@
             @if ($errors->has('content'))
             <p class="text-danger">{{$errors->first('content')}}</p>
             @endif
-
             <div class="form-group">
-                <label for="" class="h6">6. Giá / Mức lương</label>
+                    <label for="" class="h6">6. Số điện thoại </label>
+                    <input type="text" class="form-control" name="phone" id="" placeholder="0905123123">
+                </div>
+            <div class="form-group">
+                <label for="" class="h6">7. Giá / Mức lương</label>
                 <input type="text" class="form-control" name="price" id="" placeholder="5.400.000">
             </div>
             @if ($errors->has('price'))
             <p class="text-danger">{{$errors->first('price')}}</p>
             @endif
 
-            <button type="submit" class="w-25 m-auto btn btn-primary btn-block">Add</button>
+            <button type="submit" class="w-25 m-auto btn btn-primary btn-block">Đăng tin</button>
           </div>
         </div>
       </div>

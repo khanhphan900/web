@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\area;
+use App\Area;
+use App\Category;
+use App\Article;
+use App\User;
+
+use Auth;
+use Validator;
 use Illuminate\Http\Request;
 
 class AreaController extends Controller
@@ -14,7 +20,9 @@ class AreaController extends Controller
      */
     public function index()
     {
-        //
+        $NameUser = Auth::User()->name;
+        $Areas = Area::get();
+        return View('admin.Area.index',['NameUser'=>$NameUser,'Areas'=>$Areas]);
     }
 
     /**
@@ -24,7 +32,9 @@ class AreaController extends Controller
      */
     public function create()
     {
-        //
+        $NameUser = Auth::User()->name;
+        $Areas = Area::get();
+        return view('admin.Area.create',['NameUser'=>$NameUser,'Areas'=>$Areas]);
     }
 
     /**
@@ -35,7 +45,10 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $area = new Area();
+        $area->name = $request->name;
+        $area->save();
+        return redirect()->route('area.index');
     }
 
     /**
@@ -55,9 +68,12 @@ class AreaController extends Controller
      * @param  \App\area  $area
      * @return \Illuminate\Http\Response
      */
-    public function edit(area $area)
+    public function edit($id)
     {
-        //
+        $NameUser = Auth::User()->name;
+        $Area = Area::where('id', $id)->first();
+        // dd($User->name);
+        return view('admin.Area.edit', ['NameUser'=>$NameUser,'Area'=>$Area]);
     }
 
     /**
@@ -67,9 +83,12 @@ class AreaController extends Controller
      * @param  \App\area  $area
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, area $area)
+    public function update(Request $request, $id)
     {
-        //
+        Area::where('id', $id)->update([
+            'name' => $request->name,
+        ]);
+        return redirect()->route('area.index');
     }
 
     /**
@@ -78,8 +97,10 @@ class AreaController extends Controller
      * @param  \App\area  $area
      * @return \Illuminate\Http\Response
      */
-    public function destroy(area $area)
+    public function destroy($id)
     {
-        //
+        $Area = Area::find($id);
+        $Area-> delete();
+        return redirect()->route('area.index');
     }
 }

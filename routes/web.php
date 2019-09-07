@@ -25,3 +25,8 @@ Route::get('register','UserController@getRegister');
 Route::post('register','UserController@postRegister');
 
 Route::resource('Article', 'ArticleController');
+
+// admin
+Route::resource('admin', 'AdminController');
+Route::resource('area', 'AreaController');
+Route::resource('category', 'CategoryController');

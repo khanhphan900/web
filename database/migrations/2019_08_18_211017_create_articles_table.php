@@ -19,6 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string('title', 100);
             $table->string('img');
             $table->longtext('content')->nullable();
+            $table->string('phone');
             $table->string('price');
             $table->integer('area_id')->unsigned();
             $table->integer('category_id')->unsigned();

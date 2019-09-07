@@ -80,6 +80,7 @@ class ArticleController extends Controller
             $post->title = $request->title;
             $post->img = $request->img->getClientOriginalName();
             $post->content = $request->content;
+            $post->phone = $request->phone;
             $post->price = $request->price;
             // dd($post->img);
             $request->img->move('upload',$request->img->getClientOriginalName());
@@ -98,14 +99,18 @@ class ArticleController extends Controller
      */
     public function show($title)
     {
-        $id= Auth::User()->id;
-        $posts = Article::where('user_id',$id)->get();
         $post = Article::where('title',$title)->get();
         // dd($post[0]);
-        $User = Auth::user()->name;
         $Category = Category::pluck('name');
         $Area = Area::pluck('name');
-        return view('articles.show', ['Category'=>$Category,'Area'=>$Area,'User'=>$User,'posts'=>$posts,'post'=>$post[0]]);
+        if (Auth::check()) {
+            $id= Auth::User()->id;
+            $posts = Article::where('user_id',$id)->get();
+            $User = Auth::user()->name;  
+            return view('articles.show', ['Category'=>$Category,'Area'=>$Area,'posts'=>$posts,'User'=>$User,'post'=>$post[0]]);
+        } else {
+            return view('articles.show', ['Category'=>$Category,'Area'=>$Area,'post'=>$post[0]]);
+        }
     }
 
     /**

@@ -17,7 +17,14 @@ class UsersTableSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'password'=>bcrypt('123123'),
+                'role' => '3'
             ]);
         }
+        DB::table('users')->insert([
+            'name' => 'Phan Gia Khánh',
+            'email' => 'Khanhphan900@gmail.com',
+            'password'=>bcrypt('123123'),
+            'role' => '1'
+        ]);
     }
 }
