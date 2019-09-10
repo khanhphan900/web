@@ -16,8 +16,10 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
+// Trang chủ
 Route::resource('home','HomeController');
 
+// Đăng nhập đăng xuất
 Route::get('login','UserController@getLogin');
 Route::post('login','UserController@postLogin');
 Route::get('logout', 'UserController@logout');
@@ -26,7 +28,20 @@ Route::post('register','UserController@postRegister');
 
 Route::resource('Article', 'ArticleController');
 
-// admin
+// Admin
 Route::resource('admin', 'AdminController');
 Route::resource('area', 'AreaController');
 Route::resource('category', 'CategoryController');
+Route::resource('post', 'PostController');
+
+// Search
+Route::resource('search', 'SearchController');
+
+// Route::get('home/{Category}', function () {
+// })->name('Category');
+
+    // [
+    // 'as'=>'Category',
+    // 'uses'=>'SearchController@getCategory'
+    // ]);
+

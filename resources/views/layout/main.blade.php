@@ -1,14 +1,14 @@
   <!DOCTYPE html>
   <html lang="en">
     <head>
-      <title>Title</title>
+      <title>Web mua bán</title>
       <!-- Required meta tags -->
       <meta charset="utf-8" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-
+      
       <base href="{{asset('')}}">
       
       <!-- Bootstrap CSS -->
@@ -67,8 +67,8 @@
                       Đà Nẵng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        @foreach ($Area as $Area)
-                        <a class="dropdown-item" href="#">{{$Area}}</a>
+                        @foreach ($nameAreas as $nameArea)
+                        <a class="dropdown-item" href="area/{{$nameArea}}">{{$nameArea}}</a>
                         @endforeach
                     </div>
                 </li>
@@ -98,7 +98,7 @@
                       alt=""
                       width="30"
                       height="30"
-                    />{{$Category[$i]}}
+                    /><span><a class="" href="search/{{$nameCategories[$i]}}">{{$nameCategories[$i]}}</a></span>
                   </li>
                 @endfor
               </ul>
@@ -152,5 +152,7 @@
             });
         });
       </script> --}}
+      @stack('javascript')
+
     </body>
   </html>

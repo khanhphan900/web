@@ -1,12 +1,12 @@
-<header>
-    <div class="container-fluid bg-success">
-      <div class="row">
-        <div class="col-2 mb-2 mt-0 text-center">
+<header class="container-fluid bg-success">
+    <div>
+      <div class="row ">
+        <div class="col-3 mb-2 mt-0 text-center">
           <a href="home" class="h1 text-warning">Logo</a
           ><span class="text-small text-light">Web rao vặt</span>
         </div>
-        <div class="col-8">
-          <div class="row" style="margin-top: 9px">
+        <div class="col-6">
+          {{-- <div class="row" style="margin-top: 9px">
             <div class="col-8 px-0">
               <input
                 type="text"
@@ -15,11 +15,6 @@
               />
             </div>
             <div class="col-2 px-0">
-              <!-- <input
-                type="text"
-                class="form-control"
-                placeholder="Danh mục.."
-              /> -->
               <div class="dropdown">
                 <button
                   class="form-control dropdown-toggle"
@@ -34,7 +29,7 @@
                 </button>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  @foreach ($Category as $Category)
+                  @foreach ($Categories as $Category)
                     <a class="dropdown-item" href="#">{{$Category}}</a>
                   @endforeach
                 </div>
@@ -55,15 +50,15 @@
                 </button>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  @foreach ($Area as $Area)
-                  <a class="dropdown-item" href="#">{{$Area}}</a>
+                  @foreach ($Areas as $Area)
+                  <a class="dropdown-item" href="#">{{$Areas}}</a>
                   @endforeach
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
-        <div class="col-2 text-center m-auto pl-0">
+        <div class="col-3 text-center m-auto pl-0">
           @if(Auth::check())
             <a href="logout" class="bg-danger rounded text-white px-2">Đăng xuất</a>
             <a

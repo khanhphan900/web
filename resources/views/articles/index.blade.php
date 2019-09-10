@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-<main class="container-fluid">
+    <main class="container-fluid">
         <div class="row">
             <div class="col">
                 <table class="table table-bordered table-hover text-center">

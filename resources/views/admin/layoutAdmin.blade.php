@@ -44,9 +44,9 @@
             <div class="col-3">
                 <div class="list-group py-3 ">
                     <div class="list-group-item list-group-item-action h6" style="background: #F5F5F5">Admin : {{$NameUser}}</div>
-                    <a href="home" class="list-group-item list-group-item-action">Trang chính</a>
+                    <a href="home" class="list-group-item list-group-item-action">Ra trang chủ</a>
                     <a href="admin" class="list-group-item list-group-item-action ">Người dùng</a>
-                    <a href="#" class="list-group-item list-group-item-action ">Bài viết</a>
+                    <a href="{{route('post.index')}}" class="list-group-item list-group-item-action ">Bài viết</a>
                     <a href="{{route('area.index')}}" class="list-group-item list-group-item-action ">Khu vực</a>
                     <a href="{{route('category.index')}}" class="list-group-item list-group-item-action ">Loại tin</a>
                     <a href="{{route('Article.index')}}" class="list-group-item list-group-item-action">Viết bài</a>

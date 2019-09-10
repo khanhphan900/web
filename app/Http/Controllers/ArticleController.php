@@ -26,9 +26,9 @@ class ArticleController extends Controller
         $posts = Article::where('user_id',$id)->get();
         // dd($posts);
         $User = Auth::User()->name;
-        $Category = Category::pluck('name');
-        $Area = Area::pluck('name');
-        return view('articles.index', ['Category'=>$Category,'Area'=>$Area,'User'=>$User,'posts'=>$posts]);
+        $nameCategories = Category::pluck('name');
+        $nameAreas = Area::pluck('name');
+        return view('articles.index', ['nameCategories'=>$nameCategories,'nameAreas'=>$nameAreas,'User'=>$User,'posts'=>$posts]);
     }
 
     /**
@@ -39,13 +39,13 @@ class ArticleController extends Controller
     public function create()
     {
         $User = Auth::User()->name;
-        $Category = Category::pluck('name');
+        $nameCategories = Category::pluck('name');
         $Categories = Category::all();
         $Article = Article::get() ;
-        $Area = Area::pluck('name');
+        $nameAreas = Area::pluck('name');
         $Areas = Area::get();
 
-        return view('articles.dangTin', ['Category'=>$Category, 'Area'=>$Area,'Areas'=>$Areas, 'Article'=>$Article, 'Categories'=>$Categories,'User'=>$User]);
+        return view('articles.dangTin', ['nameCategories'=>$nameCategories, 'Areas'=>$Areas,'nameAreas'=>$nameAreas, 'Article'=>$Article, 'Categories'=>$Categories,'User'=>$User]);
     }
 
     /**
@@ -101,15 +101,15 @@ class ArticleController extends Controller
     {
         $post = Article::where('title',$title)->get();
         // dd($post[0]);
-        $Category = Category::pluck('name');
-        $Area = Area::pluck('name');
+        $nameCategories = Category::pluck('name');
+        $nameAreas = Area::pluck('name');
         if (Auth::check()) {
             $id= Auth::User()->id;
             $posts = Article::where('user_id',$id)->get();
             $User = Auth::user()->name;  
-            return view('articles.show', ['Category'=>$Category,'Area'=>$Area,'posts'=>$posts,'User'=>$User,'post'=>$post[0]]);
+            return view('articles.show', ['nameCategories'=>$nameCategories,'nameAreas'=>$nameAreas,'posts'=>$posts,'User'=>$User,'post'=>$post[0]]);
         } else {
-            return view('articles.show', ['Category'=>$Category,'Area'=>$Area,'post'=>$post[0]]);
+            return view('articles.show', ['nameCategories'=>$nameCategories,'nameAreas'=>$nameAreas,'post'=>$post[0]]);
         }
     }
 

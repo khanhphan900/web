@@ -13,26 +13,21 @@ class HomeController extends Controller
 {
     public function index()
     {   
-        $Category = Category::pluck('name');
-        // $Article = Article::paginate(3);
-        $Article = Article::get() ;
-        // dd($Article);
-        $Area = Area::pluck('name');
+        $nameCategories = Category::pluck('name');
+        $nameAreas = Area::pluck('name');
         $articles = Article::orderBy('id', 'desc')->paginate(15);
         if (Auth::check()) {
             $User = Auth::User()->name;
             return view('Page.tin', [
-                'Category'=>$Category, 
-                'Area'=>$Area, 
-                'Article'=>$Article, 
+                'nameCategories'=>$nameCategories, 
+                'nameAreas'=>$nameAreas, 
                 'articles'=>$articles,
                 'User'=>$User
                 ]);
         } else {
             return view('Page.tin', [
-                'Category'=>$Category, 
-                'Area'=>$Area, 
-                'Article'=>$Article, 
+                'nameCategories'=>$nameCategories, 
+                'nameAreas'=>$nameAreas, 
                 'articles'=>$articles,
                 ]);
         }

@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\category;
+use App\Category;
+use App\Article;
+use App\User;
+
+use Auth;
+use Validator;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +19,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $NameUser = Auth::User()->name;
+        $Categories = Category::get();
+        return view('admin.Category.index',['NameUser'=>$NameUser,'Categories'=>$Categories]);
     }
 
     /**
@@ -24,7 +31,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $NameUser = Auth::User()->name;
+        $Categorys = Category::get();
+        return view('admin.Category.create',['NameUser'=>$NameUser,'Categorys'=>$Categorys]);
     }
 
     /**
@@ -35,7 +44,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Category = new Category();
+        $Category->name = $request->name;
+        $Category->save();
+        return redirect()->route('category.index');
     }
 
     /**
@@ -55,9 +67,11 @@ class CategoryController extends Controller
      * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(category $category)
+    public function edit($id)
     {
-        //
+        $NameUser = Auth::User()->name;
+        $Category = Category::where('id', $id)->first();
+        return view('admin.Category.edit', ['NameUser'=>$NameUser,'Category'=>$Category]);
     }
 
     /**
@@ -67,9 +81,12 @@ class CategoryController extends Controller
      * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, category $category)
+    public function update(Request $request, $id)
     {
-        //
+        Category::where('id', $id)->update([
+            'name' => $request->name,
+        ]);
+        return redirect()->route('category.index');
     }
 
     /**
@@ -78,8 +95,10 @@ class CategoryController extends Controller
      * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(category $category)
+    public function destroy($id)
     {
-        //
+        $Category = Category::find($id);
+        $Category-> delete();
+        return redirect()->route('category.index');
     }
 }

@@ -38,7 +38,7 @@
             @endif
             <div class="form-group">
                 <label for="" class="h6">4. Hình ảnh</label>    
-                <input type="file" name="img" multiple>
+                <input type="file" name="img[]" multiple>
                 {{-- @foreach($Article as $image)
                 <li><img style="width:130px; padding: 8px; margin: 8px 0;" class="list-unstyled img-fluid" src="" alt="">  </li>
                 @endforeach --}}

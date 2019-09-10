@@ -57,9 +57,33 @@ class AreaController extends Controller
      * @param  \App\area  $area
      * @return \Illuminate\Http\Response
      */
-    public function show(area $area)
+    public function show($name)
     {
-        //
+        // dd($nameCategory);
+        $nameAreas = Area::pluck('name');
+        // $Category = Category::where('name',$name)->first();
+        $Area = Area::where('name',$name)->first();
+        // dd($Category->id);
+        $articles = Article::where('area_id',$Area->id)
+                                // ->orWhere('area_id',$Area->id)
+                                ->orderBy('id', 'desc')
+                                ->paginate(15);
+        $nameCategories = Category::pluck('name');
+        if (Auth::check()) {
+            $User = Auth::User()->name;
+            return view('Page.tin', [
+                'nameCategories'=>$nameCategories, 
+                'nameAreas'=>$nameAreas, 
+                'articles'=>$articles,
+                'User'=>$User
+                ]);
+        } else {
+            return view('Page.tin', [
+                'articles'=>$articles,
+                'nameCategories'=>$nameCategories, 
+                'nameAreas'=>$nameAreas, 
+                ]);
+        }
     }
 
     /**
