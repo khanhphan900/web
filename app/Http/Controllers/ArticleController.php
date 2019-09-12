@@ -23,7 +23,7 @@ class ArticleController extends Controller
         $id= Auth::User()->id;
         // dd($id);
         // $id->Article()->where('user_id',$id)->get();
-        $posts = Article::where('user_id',$id)->get();
+        $posts = Article::where('user_id',$id)->orderBy('id', 'desc')->get();
         // dd($posts);
         $User = Auth::User()->name;
         $nameCategories = Category::pluck('name');
@@ -60,18 +60,20 @@ class ArticleController extends Controller
         // dd($request->img);
         $request->validate([
             'title'=>'required',
-            'img'=>'max:5120',
+            'img'=>'required|image',
             'content'=>'required',
+            'phone'=>'required',
             'price'=>'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
         ],[
-            'title'=>'Vui lòng nhập tiêu đề !!!',
-            'img.image'=>'File ảnh 1 không đúng định dạng!!!',
-            'img.max'=>'File ảnh 1 không quá 5 MB!!!',
-            'content'=>'Vui lòng nhập Mô tả !!!',
+            'title.required'=>'Vui lòng nhập tiêu đề !!!',
+            'img.required'=>'File ảnh 1 không đúng định dạng!!!',
+            'img.image'=>'File ảnh 1 không quá 5 MB!!!',
+            'content.required'=>'Vui lòng nhập Mô tả !!!',
+            'phone.required'=>'Vui lòng nhập giá!!!',
             'price.required'=>'Vui lòng nhập giá!!!',
             'price.regex'=>'Giá phải là số!!!',
         ]);
-            //  dd('ok 1');
+            //  dd('ok');
             $post = new Article;
             $user = Auth::user()->id;
             $post->user_id = $user;
@@ -79,13 +81,19 @@ class ArticleController extends Controller
             $post->area_id = $request->area;
             $post->title = $request->title;
             $post->img = $request->img->getClientOriginalName();
+            // $post->img2 = $request->img2->getClientOriginalName();
+            // $post->img3 = $request->img3->getClientOriginalName();
             $post->content = $request->content;
             $post->phone = $request->phone;
             $post->price = $request->price;
-            // dd($post->img);
+            // dd($post->img0);
+            // lưu ảnh vào thư mục public/upload của laravel
             $request->img->move('upload',$request->img->getClientOriginalName());
+            // $request->img2->move('upload',$request->img2->getClientOriginalName());
+            // $request->img3->move('upload',$request->img3->getClientOriginalName());
             // dd('ok');
             $post->save();
+            
             return redirect()->route('Article.index');
         
 
@@ -119,9 +127,15 @@ class ArticleController extends Controller
      * @param  \App\article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(article $article)
+    public function edit($id)
     {
-        //
+        $User = Auth::User()->name;
+        $nameCategories = Category::pluck('name');
+        $Categories = Category::all();
+        $nameAreas = Area::pluck('name');
+        $Areas = Area::get();
+        $Article = Article::find($id);
+        return view('articles.edit', ['nameCategories'=>$nameCategories, 'Areas'=>$Areas,'nameAreas'=>$nameAreas, 'Article'=>$Article, 'Categories'=>$Categories,'User'=>$User]);
     }
 
     /**
@@ -131,9 +145,19 @@ class ArticleController extends Controller
      * @param  \App\article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, article $article)
+    public function update(Request $request, $id)
     {
-        //
+        // dd($request->category);
+        Article::where('id', $id)->update([
+            'category_id' => $request->category,
+            'area_id' => $request->area,
+            'title' => $request->title,
+            'img' => $request->img,
+            'content' => $request->content,
+            'phone' => $request->phone,
+            'price' => $request->price,
+        ]);
+        return redirect()->route('Article.index');
     }
 
     /**

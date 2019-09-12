@@ -36,23 +36,23 @@
             @if ($errors->has('title'))
             <p class="text-danger">{{$errors->first('title')}}</p>
             @endif
-            <div class="form-group">
-                <label for="" class="h6">4. Hình ảnh</label>    
-                <input type="file" name="img[]" multiple>
-                {{-- @foreach($Article as $image)
-                <li><img style="width:130px; padding: 8px; margin: 8px 0;" class="list-unstyled img-fluid" src="" alt="">  </li>
-                @endforeach --}}
 
-                  {{-- <div class="progress">
-                      <div class="progress-bar bg-primary" role="progressbar" style="width: 0%;"
-                          aria-valuenow="" aria-valuemin="0" aria-valuemax="100">0%</div>
-                  </div>
-                  <div id="success"></div> --}}
-                  
+            <div class="form-group">
+                <label for="" class="h6">4. Hình ảnh</label><br>
+                <input type="file" name="img"><br>
+              
+                {{-- <input type="file" name="img2"><br>
+                @if ($errors->has('img2'))
+                    <p class="text-danger">{{$errors->first('img2')}}</p>
+                @endif
+                <input type="file" name="img3"><br>
+                @if ($errors->has('img3'))
+                    <p class="text-danger">{{$errors->first('img3')}}</p>
+                @endif --}}
             </div>
-            @if ($errors->has('img'))
-            <p class="text-danger">{{$errors->first('img')}}</p>
-            @endif
+              @if ($errors->has('img'))
+                    <p class="text-danger">{{$errors->first('img')}}</p>
+                @endif
 
             <div class="form-group">
                 <label for="" class="h6">5. Mô tả</label>
@@ -61,13 +61,17 @@
             @if ($errors->has('content'))
             <p class="text-danger">{{$errors->first('content')}}</p>
             @endif
+
             <div class="form-group">
                     <label for="" class="h6">6. Số điện thoại </label>
                     <input type="text" class="form-control" name="phone" id="" placeholder="0905123123">
-                </div>
+            </div>
+            @if ($errors->has('phone'))
+            <p class="text-danger">{{$errors->first('phone')}}</p>
+            @endif
             <div class="form-group">
                 <label for="" class="h6">7. Giá / Mức lương</label>
-                <input type="text" class="form-control" name="price" id="" placeholder="5.400.000">
+                <input type="text" class="form-control" name="price" id="" placeholder="5400000">
             </div>
             @if ($errors->has('price'))
             <p class="text-danger">{{$errors->first('price')}}</p>

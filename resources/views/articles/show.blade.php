@@ -1,8 +1,8 @@
 @extends('layout.main')
 
 @section('content')
-<main class="container-fluid">
-  <div class="bg-light rounded h4 pl-3 py-3"><span>Tiêu đề :</span> {{$post->title}}</div>
+<main class="container-fluid border py-3">
+  <div class="bg-light rounded h4 pl-3 py-3 border">{{$post->title}}</div>
   <div class="row">
       <div class="col-4"><img src="upload/{{$post->img}}" alt="" width="250" height="300"></div>
       <div class="col-8">

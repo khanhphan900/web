@@ -27,7 +27,7 @@
                                             <button class="btn btn-info">Show</button>
                                         </form>
                                         {{-- Edit -- GET --}}
-                                        {{-- <form action="{{route('users.edit',$user->id)}}" method="GET"><button class="btn btn-warning mx-4">Edit</button></form> --}}
+                                        <form action="{{route('Article.edit',$post->id)}}" method="GET"><button class="btn btn-warning mx-4">Edit</button></form>
                                         {{-- Delete -- POST --hidden --}}
                                         <form action="{{route('Article.destroy', $post->title)}}" method="POST">
                                             <input type="hidden" name="_method" value="delete"> @csrf

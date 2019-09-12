@@ -98,7 +98,7 @@
             </div>
           </div>
         </div> --}}
-        <div class="row" style="margin-top: 9px">
+        <div class="row my-3" style="margin-top: 9px">
           <div class="col-8 px-0">
             <form action="search" method="get">
               <div class="input-group">
@@ -118,8 +118,6 @@
             <div class="dropdown">
               <button
                 class="form-control dropdown-toggle"
-                href="#"
-                role="button"
                 id="Categories"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -157,7 +155,7 @@
           </div>
         </div>
         <div class="row bg-white rounded border">
-          <div class="col">
+          <div class="col-12">
             <div class="h5 mb-0 mt-3 text-white badge badge-success">
               Tin mới
             </div>
@@ -168,7 +166,7 @@
                 <div class="card m-1" style="width: 10rem; height: 15rem" >
                   <img src="upload/{!!$article->img!!}" class="card-img-top mt-2 px-2 rounded" alt="ảnh lỗi" width="90" height="90">
                   <div class="card-body">  
-                    <a href="/Article/{{$article->title}}" class="card-title small text-secondary" style="overflow: hidden;
+                    <a href="/Article/{{$article->title}}" class="card-title small text-secondary text-decoration-none " style="overflow: hidden;
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;">

@@ -7,6 +7,7 @@ use App\Category;
 use App\Article;
 use App\User;
 use Auth;
+use Validator;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

@@ -56,7 +56,7 @@
                 <li class="list-group-item">
                   <div class="dropdown">
                     <a
-                      class="form-control dropdown-toggle"
+                      class="form-control dropdown-toggle text-decoration-none "
                       href="#"
                       role="button"
                       id="dropdownMenuLink"
@@ -68,7 +68,7 @@
                   </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         @foreach ($nameAreas as $nameArea)
-                        <a class="dropdown-item" href="area/{{$nameArea}}">{{$nameArea}}</a>
+                        <a class="dropdown-item text-decoration-none " href="area/{{$nameArea}}">{{$nameArea}}</a>
                         @endforeach
                     </div>
                 </li>
@@ -98,7 +98,7 @@
                       alt=""
                       width="30"
                       height="30"
-                    /><span><a class="" href="search/{{$nameCategories[$i]}}">{{$nameCategories[$i]}}</a></span>
+                    /><span><a class="text-decoration-none" href="search/{{$nameCategories[$i]}}">{{$nameCategories[$i]}}</a></span>
                   </li>
                 @endfor
               </ul>

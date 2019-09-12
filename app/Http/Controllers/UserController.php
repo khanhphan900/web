@@ -76,7 +76,7 @@ class UserController extends Controller
             $user = new User();
             $user->name = $request->name;
             $user->email = $request->email;
-            $user->password =  bcrypt($request->password);
+            $user->password =  bcrypt($request->password);$user->role = '3';
             $user->save();
             // echo 'Đăng ký thành công';
             return redirect('home');
