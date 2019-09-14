@@ -1,11 +1,11 @@
 <header class="container-fluid bg-success">
     <div>
-      <div class="row ">
-        <div class="col-3 mb-2 mt-0 text-center">
+      <div class="row">
+        <div class="col-5 col-md-3 mb-2 mt-0 text-center">
           <a href="home" class="h1 text-warning">Logo</a
           ><span class="text-small text-light">Web rao vặt</span>
         </div>
-        <div class="col-6">
+        <div class="col-2 col-md-6">
           {{-- <div class="row" style="margin-top: 9px">
             <div class="col-8 px-0">
               <input
@@ -58,7 +58,7 @@
             </div>
           </div> --}}
         </div>
-        <div class="col-3 text-center m-auto pl-0">
+        <div class="col-5 col-md-3 text-center m-auto pl-0">
           @if(Auth::check())
             <a href="logout" class="bg-danger rounded text-white px-2">Đăng xuất</a>
             <a
@@ -68,7 +68,7 @@
             >Đăng tin</a>
           @else
             <a href="login" class="text-warning px-2" 
-            style="border:1px dashed white ">Đăng Nhập/ Đăng Tin</a>
+            style="border:1px dashed white ">Đăng Nhập/Đăng Tin</a>
           @endif
           
           

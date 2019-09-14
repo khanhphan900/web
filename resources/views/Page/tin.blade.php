@@ -99,7 +99,7 @@
           </div>
         </div> --}}
         <div class="row my-3" style="margin-top: 9px">
-          <div class="col-8 px-0">
+          <div class="col-12 col-md-8 px-0">
             <form action="search" method="get">
               <div class="input-group">
                 <input
@@ -114,7 +114,7 @@
               </div>
             </form>
           </div>
-          <div class="col-2 px-0">
+          <div class="col-6 col-md-2 px-0">
             <div class="dropdown">
               <button
                 class="form-control dropdown-toggle"
@@ -132,7 +132,7 @@
               </div>
             </div>
           </div>
-          <div class="col-2 px-0">
+          <div class="col-6 col-md-2 px-0">
             <div class="dropdown">
               <button
                 class="form-control dropdown-toggle"

@@ -21,7 +21,7 @@
                                 <td><img src="upload/{{$post->img}}" alt="ảnh lỗi" width="50" height="50"></td>
                                 <td>{{number_format($post->price)}} VNĐ</td>
                                 <td>{{$post->created_at}}</td>
-                                <td class="d-flex align-items-center justify-content-center">
+                                <td class="d-md-flex align-items-center justify-content-center">
                                         {{-- Show -- GET --}}
                                         <form action="{{route('Article.show',$post->title)}}" method="GET">
                                             <button class="btn btn-info">Show</button>

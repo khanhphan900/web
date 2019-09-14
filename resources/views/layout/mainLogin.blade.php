@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <div class="row justify-content-center mt-5">
-        <div class="col-5 border bg-light py-2 rounded">
+        <div class="col-12 col-md-11 col-md-5  border bg-light py-2 rounded">
           @section('content')  @show
         </div>
       </div>
