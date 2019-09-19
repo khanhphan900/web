@@ -6,7 +6,7 @@
         <div class="list-group-item">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <form action="{{route('category.update', $Catogory->id)}}" method="post">
+                    <form action="{{route('category.update', $Category->id)}}" method="post">
                         <input type="hidden" name="_method" value="put"> {{csrf_field()}}
                         <div class="form-group">
                         <label class="h6" for="">Tên</label>

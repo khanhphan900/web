@@ -10,10 +10,10 @@
                 <div class="col-12">
                     <div class="bg-light rounded h4 pl-3 py-3"><span>Têu đề :</span> {{$Post->title}}</div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 text-center">
                     <img src="upload/{{$Post->img}}" alt="" width="220" height="280">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8">
                     {!!$Post->content!!} <br><br>
                     <div class="text-right h5">
                         <span class="text-secondary">SĐT liên lạc : </span>

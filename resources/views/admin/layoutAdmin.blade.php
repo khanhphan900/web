@@ -17,12 +17,12 @@
             <div class="row">
               <div class="col-6 col-md-2 mb-2 mt-0 text-center">
                 <a href="home" class="h1 text-warning">Logo</a
-                ><span class="text-small text-light">Web rao vặt</span>
+                ><br class="d-block d-md-none"><span class="text-small text-light">Web rao vặt</span>
               </div>
               <div class="d-none d-md-block col-md-8">
                   
               </div>
-              <div class="col-6 col-md-2 text-center m-auto pl-0">
+              <div class="col-5 col-md-2 text-center m-auto pl-0">
                 @if(Auth::check())
                   <a href="logout" class="bg-danger rounded text-white px-2">Đăng xuất</a>
                   <a

@@ -9,8 +9,8 @@
                         <tr>
                             <th>Tiêu đề</th>
                             <th>Ảnh</th>
-                            <th>Giá</th>
-                            <th>Ngày đăng</th>
+                            <th class="d-none d-md-block">Giá</th>
+                            <th class="d-none d-md-block">Ngày đăng</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -19,8 +19,8 @@
                             <tr>
                                 <td>{{$post->title}}</td>    
                                 <td><img src="upload/{{$post->img}}" alt="ảnh lỗi" width="50" height="50"></td>
-                                <td>{{number_format($post->price)}} VNĐ</td>
-                                <td>{{$post->created_at}}</td>
+                                <td class="d-none d-md-block">{{number_format($post->price)}} VNĐ</td>
+                                <td class="d-none d-md-block">{{$post->created_at}}</td>
                                 <td class="d-md-flex align-items-center justify-content-center">
                                         {{-- Show -- GET --}}
                                         <form action="{{route('Article.show',$post->title)}}" method="GET">

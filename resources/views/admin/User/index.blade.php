@@ -3,13 +3,13 @@
 @section('contentAdmin')
     <div class="list-group py-3 ">
         <div class="list-group-item list-group-item-action h6" style="background: #F5F5F5">Người dùng</div>
-        <div class="list-group-item">
+        <div class="list-group-item pl-1 ">
             <table  class="table table-bordered table-hover text-center">
                 <thead>
                     <tr>
                         <th>ID</th>    
                         <th>Name</th>
-                        <th>Email</th>
+                        <th class="d-none d-md-block">Email</th>
                         <th>Role</th>
                         <th>Edit</th>
                     </tr>                    
@@ -19,7 +19,7 @@
                         <tr>
                             <td>{{$User->id}}</td>
                             <td>{{$User->name}}</td>
-                            <td>{{$User->email}}</td>
+                            <td class="d-none d-md-block">{{$User->email}}</td>
                             <td>
                                 @if ($User->role=='1')
                                     Admin

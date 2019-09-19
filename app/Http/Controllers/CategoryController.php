@@ -71,6 +71,7 @@ class CategoryController extends Controller
     {
         $NameUser = Auth::User()->name;
         $Category = Category::where('id', $id)->first();
+        // dd($Category->name);
         return view('admin.Category.edit', ['NameUser'=>$NameUser,'Category'=>$Category]);
     }
 

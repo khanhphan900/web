@@ -9,8 +9,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Tiêu đề</th>
-                        <th>Giá</th>
-                        <th>Ngày đăng</th>
+                        <th class="d-none d-md-block">Giá</th>
+                        <th class="d-none d-md-block">Ngày đăng</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -19,8 +19,8 @@
                         <tr>
                             <td>{{$post->id}}</td>
                             <td>{{$post->title}}</td>
-                            <td>{{number_format($post->price)}} VNĐ</td>
-                            <td>{{$post->created_at}}</td>
+                            <td class="d-none d-md-block">{{number_format($post->price)}} VNĐ</td>
+                            <td class="d-none d-md-block">{{$post->created_at}}</td>
                             <td class="">
                                 <form action="{{route('post.show',$post->id)}}" method="GET">
                                     <button class="btn btn-info">Show</button>

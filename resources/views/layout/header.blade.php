@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-5 col-md-3 mb-2 mt-0 text-center">
           <a href="home" class="h1 text-warning">Logo</a
-          ><span class="text-small text-light">Web rao vặt</span>
+          ><br class="d-block d-md-none"><span class="text-small text-light">Web rao vặt</span>
         </div>
         <div class="col-2 col-md-6">
           {{-- <div class="row" style="margin-top: 9px">
@@ -67,8 +67,7 @@
             style="border:1px dashed white "
             >Đăng tin</a>
           @else
-            <a href="login" class="text-warning px-2" 
-            style="border:1px dashed white ">Đăng Nhập/Đăng Tin</a>
+            <a href="login" class="text-warning px-2" >Đăng Nhập</a>
           @endif
           
           

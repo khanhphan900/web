@@ -4,7 +4,7 @@
 <main class="container-fluid border py-3">
   <div class="bg-light rounded h4 pl-3 py-3 border">{{$post->title}}</div>
   <div class="row">
-      <div class="col-md-4"><img src="upload/{{$post->img}}" alt="" width="250" height="300"></div>
+      <div class="col-md-4 text-center"><img src="upload/{{$post->img}}" alt="" width="250" height="300"></div>
       <div class="col-md-8">
         {!!$post->content!!} <br><br>
         <div class="text-right h5">
